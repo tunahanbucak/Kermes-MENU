@@ -1,13 +1,11 @@
 .app-container {
-  background-color: rgb(114, 111, 112);
-  min-height: 102vh;
+  background-color:gray;
+  min-height: 93.5vh;
+  
 }
 
-.scrolling-text {
-  white-space: nowrap;
-  overflow: hidden;
-  animation: marquee 5s linear infinite;
-}
+
+
 
 @keyframes marquee {
   0% {

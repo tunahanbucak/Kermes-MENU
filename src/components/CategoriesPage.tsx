@@ -1,4 +1,4 @@
-import {Container, Card,CardActions,CardContent,CardMedia,CssBaseline,Grid,Stack,Box , Typography,  } from '@mui/material';
+import { Container, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Typography, } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MENU1 from './assets/1.jpg';
 import MENU2 from './assets/4.jpg';
@@ -10,7 +10,7 @@ const cards = [
   {
     id: 1,
     title: 'Adana Kebabı',
-    Image:'https://i.imgur.com/KujKM7D.jpg',
+    Image: 'https://i.imgur.com/KujKM7D.jpg',
   },
   {
     id: 2,
@@ -115,116 +115,116 @@ export default function Album() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        
-       
-          <Box
-            sx={{
-              bgcolor: 'yellow',
-              pt: 10,
-              pb: 2,
-            }}
-          >
-            <Container maxWidth="sm">
-              <Typography
-                component="h1"
-                variant="h2"
-                align="center"
-                color="text.primary"
-                gutterBottom
-              >
-                YEMEK
-              </Typography>
-              <Stack
-                sx={{ pt: 1 }}
-                direction="row"
-                spacing={2}
-                justifyContent="center"
-              >
-              </Stack>
-            </Container>
-          </Box>
-           <Container sx={{ py: 4 }} maxWidth="md">
-            <Grid container spacing={4}>
+
+
+        <Box
+          sx={{
+            bgcolor: 'yellow',
+            pt: 10,
+            pb: 2,
+          }}
+        >
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              YEMEK
+            </Typography>
+            <Stack
+              sx={{ pt: 1 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+            </Stack>
+          </Container>
+        </Box>
+        <Container sx={{ py: 4 }} maxWidth="md">
+          <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={4}>
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardMedia
-                  component="img"
-                  image={MENU1}
-                  alt={card.title}
-                />
-        
-                    <CardContent sx={{ flexGrow: 1 }}>
+                <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                  <CardMedia
+                    component="img"
+                    image={MENU1}
+                    alt={card.title}
+                  />
+
+                  <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                          {card.title}
+                      {card.title}
                     </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </ThemeProvider>
-     
+
 
       <ThemeProvider theme={theme}>
-      <Box
-         sx={{
+        <Box
+          sx={{
             bgcolor: 'red',
             pt: 10,
             pb: 2,
-           }}
-      >
-      <Container maxWidth="sm">
-      <Typography
-        component="h1"
-        variant="h2"
-        align="center"
-        color="text.primary"
-        gutterBottom
-      >
-        ICECEK
-      </Typography>
-      
-      <Stack
-        sx={{ pt: 1 }}
-        direction="row"
-        spacing={2}
-        justifyContent="center"
-      >
-      </Stack>
-    </Container>
-  </Box>
-      
-      <Container sx={{ py: 4 }} maxWidth="md">
-      <Grid container spacing={4}>
-      {books.map((book) => (
-       <Grid item key={book.id} xs={12} sm={6} md={4}>
-          <Card
-            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-          >
-            <CardMedia
-              component="img"
-             
-              image={MENU3}
-              alt={book.title}
-            />
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {book.title}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-       </Grid>
-     </Container>
-    </ThemeProvider>
+          }}
+        >
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              ICECEK
+            </Typography>
 
-    <ThemeProvider theme={theme}>
+            <Stack
+              sx={{ pt: 1 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+            </Stack>
+          </Container>
+        </Box>
+
+        <Container sx={{ py: 4 }} maxWidth="md">
+          <Grid container spacing={4}>
+            {books.map((book) => (
+              <Grid item key={book.id} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  <CardMedia
+                    component="img"
+
+                    image={MENU3}
+                    alt={book.title}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {book.title}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </ThemeProvider>
+
+      <ThemeProvider theme={theme}>
         <Box
           sx={{
-            backgroundColor:'green',
+            backgroundColor: 'green',
             pt: 10,
             pb: 2,
           }}
@@ -239,7 +239,7 @@ export default function Album() {
             >
               TATLI
             </Typography>
-            
+
             <Stack
               sx={{ pt: 1 }}
               direction="row"
@@ -250,7 +250,7 @@ export default function Album() {
           </Container>
         </Box>
         <Container sx={{ py: 4 }} maxWidth="md">
-         
+
           <Grid container spacing={4}>
             {maps.map((map) => (
               <Grid item key={map.id} xs={12} sm={6} md={4}>
@@ -272,8 +272,8 @@ export default function Album() {
             ))}
           </Grid>
         </Container>
-        </ThemeProvider>
+      </ThemeProvider>
 
-        </>
+    </>
   );
 }
