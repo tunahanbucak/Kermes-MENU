@@ -1,59 +1,40 @@
 import { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
-import Image from './assets/kermes.jpg';
+import image from './assets/kermes.jpg';
 import { Box, Collapse, Container, Grid, IconButton, Typography } from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+// const Content = styled('section')({
+//     backgroundColor: 'gray',
+//     padding: '40px 0',
+// });
 
-
-
-
-
-const Content = styled('section')({
-    backgroundColor: 'gray',
-    padding: '40px 0',
-
-});
-
-
-
-
-const ImageWrapper = styled('div')({
-    height: '100vh',
-    width: '97vh',
-    position: 'relative',
-    overflow: 'hidden',
-    '& img': {
-        objectFit: 'cover',
-        objectPosition: '50% 50%',
-        height: '100%',
-        width: '100%',
-
-    },
-});
-
-
-
+// const ImageWrapper = styled('div')({
+//     height: '100vh',
+//     width: '97vh',
+//     position: 'relative',
+//     overflow: 'hidden',
+//     '& img': {
+//         objectFit: 'cover',
+//         objectPosition: '50% 50%',
+//         height: '100%',
+//         width: '100%',
+//     },
+// });
 
 export default function HomePage() {
     const [activeIndex, setActiveIndex] = useState(0); // default value is 0
-
 
     const [checked, setChecked] = useState(false);
     useEffect(() => {
         setChecked(true);
     }, []);
 
-
     return (
         <>
-
-
-
             <Collapse
                 in={checked}
                 {...(checked ? { timeout: 1000 } : {})}>
-
                 <div style={{ textAlign: 'center', }}>
                     <Container maxWidth="md">
                         <Grid container alignItems="center" justifyContent="center"  >
@@ -69,10 +50,10 @@ export default function HomePage() {
                     </Container>
                 </div>
             </Collapse>
-            <Content>
+            <Box>
                 <Container maxWidth="md">
-                    <Grid container spacing={9} alignItems="center">
-                        <Grid item xs={12} md={6}>
+                    <Grid container spacing={1} alignItems="center">
+                        <Grid item xs={12} sm={12} md={6} xl={6}>
                             <Box textAlign='left' >
                                 <Typography variant="h2" component="h2" gutterBottom>
                                     KERMESIMIZ HAKKINDA
@@ -82,28 +63,17 @@ export default function HomePage() {
                                 </Typography>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Box textAlign="right">
-                                <ImageWrapper >
-                                    <img src={Image} alt="kermes" />
-                                </ImageWrapper>
+                        <Grid item xs={12}  sm={12} md={6} xl={6}>
+                            <Box sx={{width: '100%'}}>
+                                <img width='100%' src={image} alt="kermes" />
                             </Box>
                         </Grid>
                     </Grid>
                 </Container>
-            </Content>
-
-
-
-
-
-
+            </Box>
         </>
     );
 }
-
-
-
 
 function useStyles() {
     throw new Error('Function not implemented.');
