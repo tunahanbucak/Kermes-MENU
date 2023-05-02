@@ -1,13 +1,18 @@
 import Header from "./components/Header";
-import React from "react";
-import "./App.css";
-import { makeStyles } from "@mui/material";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu1 from "./components/Menu1";
 
-export default function App() {
- 
+function App() {
   return (
-    <div className="app-container">
-      <Header />
+    <div>   
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Header />} />
+          <Route path="/menu/:id" element={<Menu1/>}  />
+        </Routes> 
+      </BrowserRouter>
     </div>
   );
 }
+
+export default App;
