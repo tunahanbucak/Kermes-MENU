@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -6,7 +5,6 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const styles = {
   container: {
-     
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100vh',
@@ -14,7 +12,6 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    
   },
   card: {
     width: '100%',
@@ -41,7 +38,11 @@ const ContactPage = () => {
           </Typography>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box sx={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
+              >
                 <LocationOnIcon sx={styles.icon} fontSize="large" />
                 <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
                   Adres
@@ -80,7 +81,11 @@ const ContactPage = () => {
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box sx={{
+                display: 'flex',
+                alignItems: 'center'
+              }}
+              >
                 <PhoneIcon sx={styles.icon} fontSize="large" />
                 <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
                   Telefon (2)
@@ -95,8 +100,7 @@ const ContactPage = () => {
           </Grid>
         </CardContent>
       </Card>
-      </Box>
-      );
+    </Box>
+  );
 };
-
-      export default ContactPage;
+export default ContactPage;
